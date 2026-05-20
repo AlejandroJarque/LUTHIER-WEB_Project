@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: "G.O.A.T.",
   description: "Luthier Barcelona",
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 const bebasNeue = Bebas_Neue({
@@ -20,7 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
       className={`h-full antialiased ${bebasNeue.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
