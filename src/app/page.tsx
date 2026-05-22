@@ -5,12 +5,7 @@ export default function Home() {
   );
 }
 
-async function sleep(ms: number) {
-  return new Promise(r => setTimeout(r, ms));
-}
-
 async function Landing() {
-  await sleep(3000);
   return (
     <div className="h-screen bg-cover bg-[center_00%]"
       style={{ backgroundImage: "url('/img/landingv.jpg')" }}>
