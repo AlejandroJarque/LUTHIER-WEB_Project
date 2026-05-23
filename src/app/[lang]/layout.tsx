@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue } from 'next/font/google'
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,13 +17,16 @@ const bebasNeue = Bebas_Neue({
   variable: '--font-bebas',
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export async function generateStaticParams() {
+  return [{ lang: 'cat' }, { lang: 'en' }, { lang: 'es' }]
+}
+
+export default async function RootLayout(props: LayoutProps<'/[lang]'>) {
+  const { children, params } = props;
+  const { lang } = await params
+
   return (
-    <html
+    <html lang={lang}
       className={`h-full antialiased ${bebasNeue.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

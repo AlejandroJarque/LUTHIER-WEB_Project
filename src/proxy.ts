@@ -19,12 +19,12 @@ export default function proxy(request: NextRequest) {
     if (pathHasLocale) {
         return
     }
-
+ 
     const locale = getLocale(request)
     request.nextUrl.pathname = `/${locale}${pathname}`
     return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {
-    matcher: '/((?!_next|img|.well-known).*)'
+    matcher: '/((?!_next|img|.well-known|favicon.ico).*)'
 }
