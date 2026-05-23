@@ -1,35 +1,18 @@
-import type { Metadata } from "next";
-import { Bebas_Neue } from 'next/font/google'
+import Header from '@/components/Header'
+import { getLangDictionary, getLangOrNotFound } from "@/_lang/lang";
 
-import './globals.css';
-
-export const metadata: Metadata = {
-  title: "G.O.A.T.",
-  description: "Luthier Barcelona",
-  icons: {
-    icon: '/favicon.ico'
-  }
-};
-
-const bebasNeue = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-bebas',
-});
 
 export async function generateStaticParams() {
   return [{ lang: 'cat' }, { lang: 'en' }, { lang: 'es' }]
 }
 
-export default async function RootLayout(props: LayoutProps<'/[lang]'>) {
+export default async function LocaleLayout(props: LayoutProps<'/[lang]'>) {
   const { children, params } = props;
-  const { lang } = await params
+  const lang = getLangOrNotFound((await (params)).lang);
+  const langdict = await getLangDictionary(lang);
 
-  return (
-    <html lang={lang}
-      className={`h-full antialiased ${bebasNeue.variable}`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
+  return <>
+    <Header i18={langdict.headers} />
+    <main>{children}</main>
+  </>
 }
