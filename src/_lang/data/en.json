@@ -1,5 +1,9 @@
 {
-    "headers": {},
+    "navigation": {
+        "aboutme": "About Me",
+        "services": "Services - Luthier",
+        "contact": "Contact"
+    },
     "landing": {
         "title": "Expert repair services for string instruments",
         "contact": "Contact"

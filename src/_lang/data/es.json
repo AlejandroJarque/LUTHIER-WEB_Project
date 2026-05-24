@@ -1,5 +1,9 @@
 {
-    "headers": {},
+    "navigation": {
+        "aboutme": "Sobre Mi",
+        "services": "Servicios - Luthier",
+        "contact": "Contacto"
+    },
     "landing": {
         "title": "Reparación profesional de instrumentos de cuerda",
         "contact": "Contacto"

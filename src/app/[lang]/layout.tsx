@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Navigation from '@/components/Navigation'
 import { getLangDictionary, getLangOrNotFound } from "@/_lang/lang";
 
 
@@ -12,7 +12,7 @@ export default async function LocaleLayout(props: LayoutProps<'/[lang]'>) {
   const langdict = await getLangDictionary(lang);
 
   return <>
-    <Header i18={langdict.headers} />
+    <Navigation i18={langdict.navigation} />
     <main>{children}</main>
   </>
 }
