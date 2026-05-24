@@ -3,6 +3,12 @@
 :root {
   --background: #171717;
   --foreground: rgba(230, 230, 230, 1);
+  --jukka-dark: #181818;
+  --jukka-blood: #92181a;
+  --jukka-red: #B11215;
+  --jukka-toxic: #28e751;
+  --jukka-green: #2bb148;
+  --jukka-lgray: #d8d8d8;
 }
 
 @theme inline {
@@ -11,6 +17,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-bebas: var(--font-bebas);
+
+  /* Colors */
+  --color-jukka-dark: var(--jukka-dark);
+  --color-jukka-blood: var(--jukka-blood);
+  --color-jukka-red: var(--jukka-red);
+  --color-jukka-toxic: var(--jukka-toxic);
+  --color-jukka-green: var(--jukka-green);
+  --color-jukka-lgray: var(--jukka-lgray);
+
 }
 
 @media (prefers-color-scheme: dark) {
