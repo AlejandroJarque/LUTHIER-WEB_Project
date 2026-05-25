@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation'
+import Navigation from '@/components/nav/Navigation'
 import { getLangDictionary, getLangOrNotFound } from "@/_lang/lang";
 
 
@@ -13,6 +13,6 @@ export default async function LocaleLayout(props: LayoutProps<'/[lang]'>) {
 
   return <>
     <Navigation i18={langdict.navigation} />
-    <main>{children}</main>
+    <div>{children}</div>
   </>
 }
