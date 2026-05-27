@@ -1,25 +1,31 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server"
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE, Locale, isSupported } from "./_lang/lang";
+import { parseAccepetedLanguage } from './util/RequestUtils'
 
-
-const supportedLocales = ['es', 'cat', 'en']
-const defaultLocale = 'cat'
-
-function getLocale(request: NextRequest) {
-    const langs = request.headers.get('accept-language')
-    langs?.split(",")
-    return defaultLocale;
+function getLocale(request: NextRequest): Locale {
+    const acceptedLanguage = parseAccepetedLanguage(request);
+    for (const language of acceptedLanguage) {
+        if (isSupported(language.locale)) {
+            return language.locale
+        }
+        const lang = language.locale.split('-')[0]
+        if (isSupported(lang)) {
+            return lang as Locale
+        }
+    }
+    return DEFAULT_LOCALE
 }
 
 
 export default function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl
-    const pathHasLocale = supportedLocales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
+    const pathHasLocale = SUPPORTED_LOCALES.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
 
     if (pathHasLocale) {
         return
     }
- 
+
     const locale = getLocale(request)
     request.nextUrl.pathname = `/${locale}${pathname}`
     return NextResponse.redirect(request.nextUrl);

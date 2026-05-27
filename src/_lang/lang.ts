@@ -1,21 +1,24 @@
-import { notFound } from 'next/navigation'
 import 'server-only'
 
-const dictionaries = {
+const langDictionaries = {
     cat: () => import('@/_lang/data/cat.json').then((module) => module.default),
     en: () => import('@/_lang/data/en.json').then((module) => module.default),
     es: () => import('@/_lang/data/es.json').then((module) => module.default)
 }
 
-export type Locale = keyof typeof dictionaries
+export const DEFAULT_LOCALE = 'cat' as Locale
+export const SUPPORTED_LOCALES = Object.keys(langDictionaries) as Locale[]
 
-const isSupported = (locale: string): locale is Locale => locale in dictionaries
+export type Locale = keyof typeof langDictionaries
 
-export function getLangOrNotFound(locale: string): Locale {
-    if (!isSupported(locale)) {
-        notFound()
+export const isSupported = (locale: string): locale is Locale => locale in langDictionaries
+
+export function getLocale(locale: string): Locale {
+    if (isSupported(locale)) {
+        return locale
     }
-    return locale
+    return DEFAULT_LOCALE
 }
 
-export const getLangDictionary = async (locale: Locale) => dictionaries[locale]()
+export const getLangDictionary = async (locale: Locale) => langDictionaries[locale]()
+
