@@ -10,6 +10,17 @@
     },
     "aboutme": {
         "title": "About Me",
-        "description": "After more than half a decade of repairing and adjusting instruments as an assistant to experienced luthiers, I decided a couple of years ago to embark on my own path. Contact me for a no-obligation quote, quality work, and competitive prices."
+        "description": [
+            { "text": "After ", "highlight": false },
+            { "text": "more than half a decade repairing and adjusting instruments", "highlight": true },
+            { "text": " as an assistant to experienced luthiers, a couple of years ago I decided to go out on my own. ", "highlight": false },
+            { "text": "Contact me", "highlight": true },
+            { "text": " for a no-obligation quote, ", "highlight": false },
+            { "text": "quality work", "highlight": true },
+            { "text": " and ", "highlight": false },
+            { "text": "competitive prices.", "highlight": true },
+            { "text": " Because a well-maintained instrument never goes out of style. If your guitar has been collecting dust, ", "highlight": false },
+            { "text": "it's time to bring it back to life.", "highlight": true }
+        ]
     }
 }

@@ -1,4 +1,5 @@
 import 'server-only'
+import react from 'react'
 
 const langDictionaries = {
     cat: () => import('@/_lang/data/cat.json').then((module) => module.default),
@@ -18,6 +19,14 @@ export function getLocale(locale: string): Locale {
         return locale
     }
     return DEFAULT_LOCALE
+}
+
+export function getAsText(description: { text: string; highlight: boolean }[]|string): react.JSX.Element[] | string {
+
+    if (typeof description === 'string') {
+        return description
+    }
+    return description.map((elem, index) => elem.highlight ? <b className="text-orange-400" key={index}>{elem.text}</b> : <span key={index}>{elem.text}</span>)
 }
 
 export const getLangDictionary = async (locale: Locale) => langDictionaries[locale]()

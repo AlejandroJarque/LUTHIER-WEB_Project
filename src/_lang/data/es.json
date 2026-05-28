@@ -10,6 +10,17 @@
     },
     "aboutme": {
         "title": "Sobre Mi",
-        "description": "Después de más de media decada  reparando y ajustando instrumentos como ayudante de otros luthieres experimentados, hace un par de años decidí emprender mi camino en solitario. Contáctame para un presupuesto sin compromiso, trabajos de calidad y precios competitivos."
+        "description": [
+            { "text": "Después de ", "highlight": false },
+            { "text": "más de media decada reparando y ajustando instrumentos", "highlight": true },
+            { "text": " como ayudante de otros luthieres experimentados, hace un par de años decidí emprender mi camino en solitario. ", "highlight": false },
+            { "text": "Contáctame", "highlight": true },
+            { "text": " para un presupuesto sin compromiso, ", "highlight": false },
+            { "text": "trabajos de calidad", "highlight": true },
+            { "text": " y ", "highlight": false },
+            { "text": "precios competitivos.", "highlight": true },
+            { "text": " Porque un buen instrumento bien cuidado no tiene fecha de caducidad. Si tu guitarra lleva tiempo cogiendo polvo, ", "highlight": false },
+            { "text": "es hora de devolverle la vida.", "highlight": true }
+        ]    
     }
 }

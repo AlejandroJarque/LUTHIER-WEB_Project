@@ -1,6 +1,7 @@
-import { getLangDictionary, getLocale } from '../../_lang/lang';
+import { getLangDictionary, getLocale, getAsText } from '../../_lang/lang';
 import Image from 'next/image';
 import { TitleText } from '@/components/utils';
+
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
   const lang = getLocale((await (params)).lang);
@@ -39,7 +40,7 @@ function Aboutme({ i18 } : { i18: any }) {
       <div className="flex flex-row m-2 ml-8">
         <Image className="border-transparent border rounded w-full h-full md:max-w-[480px]" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
         <div className="flex flex-col justify-center items-start m-4 md:m-8 text-left">
-          <p>{i18.description}</p>
+          <p>{getAsText(i18.description)}</p>
         </div>
       </div>
     </div>

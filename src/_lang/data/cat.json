@@ -10,6 +10,17 @@
     },
     "aboutme": {
         "title": "Sobre Mi",
-        "description": "Després de més d'una dècada reparant i ajustant instruments com a ajudant de luthiers experimentats, fa un parell d'anys vaig decidir emprendre el meu propi camí. Contacta'm per un pressupost sense compromís, treballs de qualitat i preus competitius."
+        "description": [
+            { "text": "Després de ", "highlight": false },
+            { "text": "més de mitja dècada reparant i ajustant instruments", "highlight": true },
+            { "text": " com a ajudant d'altres luthiers experimentats, fa un parell d'anys vaig decidir emprendre el meu camí en solitari. ", "highlight": false },
+            { "text": "Contacta'm", "highlight": true },
+            { "text": " per a un pressupost sense compromís, ", "highlight": false },
+            { "text": "treballs de qualitat", "highlight": true },
+            { "text": " i ", "highlight": false },
+            { "text": "preus competitius.", "highlight": true },
+            { "text": " Perquè un bon instrument ben cuidat no té data de caducitat. Si la teva guitarra fa temps que agafa pols, ", "highlight": false },
+            { "text": "és hora de tornar-li la vida.", "highlight": true }
+        ]
     }
 }
