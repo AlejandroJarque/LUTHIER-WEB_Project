@@ -7,5 +7,9 @@
     "landing": {
         "title": "Expert repair services for string instruments",
         "contact": "Contact"
+    },
+    "aboutme": {
+        "title": "About Me",
+        "description": "After more than half a decade of repairing and adjusting instruments as an assistant to experienced luthiers, I decided a couple of years ago to embark on my own path. Contact me for a no-obligation quote, quality work, and competitive prices."
     }
 }
