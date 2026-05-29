@@ -22,5 +22,10 @@
             { "text": " Porque un buen instrumento bien cuidado no tiene fecha de caducidad. Si tu guitarra lleva tiempo cogiendo polvo, ", "highlight": false },
             { "text": "es hora de devolverle la vida.", "highlight": true }
         ]    
+    },
+    "services": {
+        "title": "Servicios - Luthier",
+        "description1": "Ajustes y cambio de cuerdas\nRestauración roturas/abolladuras\nReparaciones electrónicas\nCustomizaciones\nReemplazamiento de componentes\nOtros...",
+        "description2": "Más de 6 años de experiencia\nProfesionalidad garantizada\nProximidad y atención personalizada\nPrecios competitivos y asequibles"
     }
 }

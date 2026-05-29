@@ -22,5 +22,10 @@
             { "text": " Because a well-maintained instrument never goes out of style. If your guitar has been collecting dust, ", "highlight": false },
             { "text": "it's time to bring it back to life.", "highlight": true }
         ]
+    },
+    "services": {
+        "title": "Services - Luthier",
+        "description1": "Setups and string changes\nBreak/dent restoration\nElectronic repairs\nCustomizations\nComponent replacement\nOther...",
+        "description2": "Over 6 years of experience\nGuaranteed professionalism\nPersonalized attention and proximity\nCompetitive and affordable prices"
     }
 }

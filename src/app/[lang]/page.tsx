@@ -10,6 +10,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
     <>
       <Landing i18={langdict.landing} />
       <Aboutme i18={langdict.aboutme} />
+      <Services i18={langdict.services} />
     </>
   );
 }
@@ -37,11 +38,26 @@ function Aboutme({ i18 } : { i18: any }) {
   return (
     <div className="mx-20">
       <TitleText title={i18.title} />
-      <div className="flex flex-row m-2 ml-8">
+      <div className="flex flex-row m-2 ml-8 mt-4">
         <Image className="border-transparent border rounded w-full h-full md:max-w-[480px]" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
         <div className="flex flex-col justify-center items-start m-4 md:m-8 text-left">
           <p>{getAsText(i18.description)}</p>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function Services({ i18 }: { i18: any }) {
+  return (
+    <div className="mx-20">
+      <TitleText title={i18.title} />
+      <div className="flex flex-row justify-center m-2 ml-8 mt-4">
+        <p className="whitespace-pre-line pr-40">{i18.description1}</p>
+        <p className= "whitespace-pre-line text-orange-400 pl-40">{i18.description2}</p>
+      </div>
+      <div>
+        
       </div>
     </div>
   )

@@ -22,5 +22,10 @@
             { "text": " Perquè un bon instrument ben cuidat no té data de caducitat. Si la teva guitarra fa temps que agafa pols, ", "highlight": false },
             { "text": "és hora de tornar-li la vida.", "highlight": true }
         ]
+    },
+    "services": {
+        "title": "Serveis - Luthier",
+        "description1": "Ajustaments i canvi de cordes\nRestauració trencaments/cops\nReparacions electròniques\nCustomitzacions\nReemplaçament de components\nAltres...", 
+        "description2": "Més de 6 anys d'experiència\nProfessionalitat garantida\nProximitat i atenció personalitzada\nPreus competitius i assequibles" 
     }
 }
