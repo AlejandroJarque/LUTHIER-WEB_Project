@@ -27,5 +27,9 @@
         "title": "Serveis - Luthier",
         "description1": "Ajustaments i canvi de cordes\nRestauració trencaments/cops\nReparacions electròniques\nCustomitzacions\nReemplaçament de components\nAltres...", 
         "description2": "Més de 6 anys d'experiència\nProfessionalitat garantida\nProximitat i atenció personalitzada\nPreus competitius i assequibles" 
+    },
+    "contact": {
+        "title": "Contacte",
+        "description": "Pots contactar amb mi a través del formulari de contacte o per correu electrònic."
     }
 }

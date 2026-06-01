@@ -27,5 +27,9 @@
         "title": "Services - Luthier",
         "description1": "Setups and string changes\nBreak/dent restoration\nElectronic repairs\nCustomizations\nComponent replacement\nOther...",
         "description2": "Over 6 years of experience\nGuaranteed professionalism\nPersonalized attention and proximity\nCompetitive and affordable prices"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "You can contact me through the contact form or by email."
     }
 }

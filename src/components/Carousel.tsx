@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react"
+import Image from 'next/image'
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,9 +13,12 @@ function Carousel() {
 ]
 
   return (
-    <div>
-      <button onClick={() => setCurrentIndex(currentIndex - 1)}>Anterior</button>
-      <button onClick={() => setCurrentIndex(currentIndex + 1)}>Siguiente</button>
+    <div className="flex items-center justify-center gap-8">
+      <button className="hover:text-orange-400" onClick={() => setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)}>Anterior</button>
+      <Image className="border-transparent border rounded" src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} width={500} height={300} />
+      <button className="hover:text-orange-400" onClick={() => setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)}>Siguiente</button>
     </div>
   )
 }
+
+export default Carousel

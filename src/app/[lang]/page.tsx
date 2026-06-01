@@ -1,6 +1,7 @@
 import { getLangDictionary, getLocale, getAsText } from '../../_lang/lang';
 import Image from 'next/image';
 import { TitleText } from '@/components/utils';
+import Carousel from '@/components/Carousel';
 
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
@@ -11,6 +12,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
       <Landing i18={langdict.landing} />
       <Aboutme i18={langdict.aboutme} />
       <Services i18={langdict.services} />
+      <Contact i18={langdict.contact} />
     </>
   );
 }
@@ -56,8 +58,19 @@ function Services({ i18 }: { i18: any }) {
         <p className="whitespace-pre-line pr-40">{i18.description1}</p>
         <p className= "whitespace-pre-line text-orange-400 pl-40">{i18.description2}</p>
       </div>
-      <div>
-        
+      <div className= "flex flex-row justify-center m-2 ml-8 mt-4">
+        <Carousel />
+      </div>
+    </div>
+  )
+}
+
+function Contact({ i18 }: { i18: any }) {
+  return (
+    <div className="mx-20">
+      <TitleText title={i18.title} />
+      <div className="flex flex-row justify-center m-2 ml-8 mt-4">
+        <p>{i18.description}</p>
       </div>
     </div>
   )

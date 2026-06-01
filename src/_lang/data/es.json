@@ -27,5 +27,9 @@
         "title": "Servicios - Luthier",
         "description1": "Ajustes y cambio de cuerdas\nRestauración roturas/abolladuras\nReparaciones electrónicas\nCustomizaciones\nReemplazamiento de componentes\nOtros...",
         "description2": "Más de 6 años de experiencia\nProfesionalidad garantizada\nProximidad y atención personalizada\nPrecios competitivos y asequibles"
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Puedes contactar conmigo a través del formulario de contacto o por correo electrónico."
     }
 }
