@@ -24,7 +24,7 @@ function Landing({ i18 }: { i18: any }) {
       style={{ backgroundImage: "url('/img/workshop.jpg')" }}>
       <div className="bg-gray-900/50 w-full h-full pt-20 flex flex-col lg:flex-row gap-10 justify-center items-center text-white text-center">
         <div className="md:w-1/3 w-2/3 md:h-full h-auto flex flex-col justify-center items-center 
-        text-white text-center lg:text-8xl md:text-[4rem]  text-5xl font-bebas leading-[1.01] ">
+        text-white text-center lg:text-8xl md:text-[4rem] text-5xl font-bebas leading-[1.01] ">
           {i18.title}
         </div>
         <div className="md:w-1/3 w-2/3 md:h-full h-auto flex justify-center items-center m-6">
@@ -36,12 +36,12 @@ function Landing({ i18 }: { i18: any }) {
   )
 }
 
-function Aboutme({ i18 } : { i18: any }) {
+function Aboutme({ i18 }: { i18: any }) {
   return (
-    <div className="mx-20">
+    <div className="mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row m-2 ml-8 mt-4">
-        <Image className="border-transparent border rounded w-full h-full md:max-w-[480px]" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
+      <div className="flex flex-row m-2 ml-8 mt-4 pt-6">
+        <Image className="border-transparent border-0 border rounded w-full h-full md:max-w-[480px] shadow-md shadow-orange-400/40" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
         <div className="flex flex-col justify-center items-start m-4 md:m-8 text-left">
           <p>{getAsText(i18.description)}</p>
         </div>
@@ -52,14 +52,21 @@ function Aboutme({ i18 } : { i18: any }) {
 
 function Services({ i18 }: { i18: any }) {
   return (
-    <div className="mx-20">
+    <div className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row justify-center m-2 ml-8 mt-4">
+      <div className="flex flex-row justify-center m-2 ml-8 mt-4 pt-6">
         <p className="whitespace-pre-line pr-40">{i18.description1}</p>
-        <p className= "whitespace-pre-line text-orange-400 pl-40">{i18.description2}</p>
+        <p className="whitespace-pre-line text-orange-400 pl-40">{i18.description2}</p>
       </div>
-      <div className= "flex flex-row justify-center m-2 ml-8 mt-4">
-        <Carousel />
+      <div className="flex flex-row justify-center m-2 ml-8 mt-12 mb-4 max-w-[70%]">
+        <Carousel source={[
+          '/img/mywork/00001.webp',
+          '/img/mywork/00002.webp',
+          '/img/mywork/00003.webp',
+          '/img/mywork/00004.webp',
+          '/img/mywork/00005.webp',
+          '/img/mywork/00007.webp',
+        ]} />
       </div>
     </div>
   )
@@ -67,9 +74,9 @@ function Services({ i18 }: { i18: any }) {
 
 function Contact({ i18 }: { i18: any }) {
   return (
-    <div className="mx-20">
+    <div className="mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row justify-center m-2 ml-8 mt-4">
+      <div className="flex flex-row justify-center m-2 ml-8 mt-4 pt-6">
         <p>{i18.description}</p>
       </div>
     </div>

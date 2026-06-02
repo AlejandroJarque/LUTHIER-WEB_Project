@@ -1,42 +1,43 @@
 'use client';
 import { useState } from "react"
 import Image from 'next/image'
+import { ArrowForward, ArrowBack } from "./svg/SVGIcons";
 
-function Carousel() {
+function Carousel({ source }: { source: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
-  const images = [
-  '/img/mywork/00002.webp',
-  '/img/mywork/00003.webp',
-  '/img/mywork/00004.webp',
-  '/img/mywork/00005.webp',
-  '/img/mywork/00007.webp',
-]
+  const [imagePreview, setImagePreview] = useState('');
+
+  const images = source ?? [
+    '/img/mywork/00001.webp',
+    '/img/mywork/00002.webp',
+    '/img/mywork/00003.webp',
+    '/img/mywork/00004.webp',
+    '/img/mywork/00005.webp',
+    '/img/mywork/00007.webp',
+  ]
+
+
   const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1
   const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1
-  
+
   return (
     <>
       <div className="flex items-center justify-center gap-8">
-        <button className="hover:text-orange-400" onClick={() => setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)}>Anterior</button>
-        <Image className="border-transparent border rounded" src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} width={400} height={200} onClick={() => {
-          setSelectedImage(images[currentIndex]);
-          setIsOpen(true);
+        <button className="hover:text-orange-400 cursor-pointer " onClick={() => setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)}><ArrowBack /></button>
+        <Image className="hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 rotate-y-10 transition duration-300" src={images[prevIndex]} alt={`Imagen ${currentIndex - 1}`} width={400} height={200} onClick={() => {
+          setImagePreview(images[prevIndex])
         }} />
-        <Image className="border-transparent border rounded" src={images[prevIndex]} alt={`Imagen ${prevIndex + 1}`} width={500} height={300} onClick={() => {
-          setSelectedImage(images[prevIndex]);
-          setIsOpen(true);
+        <Image className=" hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 transition duration-300" src={images[currentIndex]} alt={`Imagen ${currentIndex}`} width={450} height={250} onClick={() => {
+          setImagePreview(images[currentIndex])
         }} />
-        <Image className="border-transparent border rounded" src={images[nextIndex]} alt={`Imagen ${nextIndex + 1}`} width={400} height={200} onClick={() => {
-          setSelectedImage(images[nextIndex]);
-          setIsOpen(true);
+        <Image className="hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 -rotate-y-10 transition duration-300" src={images[nextIndex]} alt={`Imagen ${currentIndex + 1}`} width={400} height={200} onClick={() => {
+          setImagePreview(images[nextIndex])
         }} />
-        <button className="hover:text-orange-400" onClick={() => setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)}>Siguiente</button>
+        <button className="hover:text-orange-400 cursor-pointer" onClick={() => setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)}><ArrowForward /></button>
       </div>
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50" onClick={() => setIsOpen(false)}>
-          <Image src={selectedImage} alt="Imagen ampliada" width={700} height={400} onClick={() => setIsOpen(false)} />
+      {imagePreview && (
+        <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50" onClick={() => setImagePreview('')}>
+          <Image className="border rounded shadow-md border-0" src={imagePreview} alt="Imagen ampliada" width={700} height={400} onClick={() => setImagePreview('')} />
         </div>
       )}
     </>
