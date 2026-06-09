@@ -1,8 +1,13 @@
 import { getLangDictionary, getLocale, getAsText } from '../../_lang/lang';
 import Image from 'next/image';
-import { TitleText } from '@/components/utils';
+import { TitleText, TitleLogo} from '@/components/utils';
 import Carousel from '@/components/Carousel';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
+const icons: { [key: string]: any } = {
+  instagram: <FaInstagram size={32} />,
+  whatsapp: <FaWhatsapp size={32} />,
+  };
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
   const lang = getLocale((await (params)).lang);
@@ -13,6 +18,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
       <Aboutme i18={langdict.aboutme} />
       <Services i18={langdict.services} />
       <Contact i18={langdict.contact} />
+      <FinalFooter i18={langdict.footer} />
     </>
   );
 }
@@ -74,11 +80,32 @@ function Services({ i18 }: { i18: any }) {
 
 function Contact({ i18 }: { i18: any }) {
   return (
-    <div className="mx-20 pt-10">
+    <div className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row justify-center m-2 ml-8 mt-4 pt-6">
-        <p>{i18.description}</p>
+      <div className="flex flex-row justify-center gap-20 mt-8">
+        <div className="flex flex-col gap-4 pr-20 text-2xl">
+          {i18.links1.map((link: any) => (
+              <a key={link.label} href={link.url} className="flex items-center gap-3">
+                {icons[link.icon]}
+                {link.label}
+              </a>
+          ))}
+        </div>
+        <div className="flex flex-col gap-4 pl-20 text-2xl">
+          <p className="text-orange-400">{i18.description2}</p>
+          {i18.links2.map((link: any) => (
+            <a key={link.label} href={link.url}>{link.label}</a>
+          ))}
+        </div>
       </div>
+    </div>
+  )
+}
+
+function FinalFooter({ i18 }: { i18: any }) {
+  return (
+    <div className="flex flex-col justify-center items-center mx-20 pt-10 pb-20">
+      <TitleLogo />
     </div>
   )
 }

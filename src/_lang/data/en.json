@@ -30,6 +30,17 @@
     },
     "contact": {
         "title": "Contact",
-        "description": "You can contact me through the contact form or by email."
+        "description1": "You can contact me through the following links:",
+        "links1": [
+            { "icon": "instagram", "url": "#", "label": "@jukkaluthier" },
+            { "icon": "whatsapp", "url": "#", "label": "6*********" }
+        ],
+        "description2": "También a través de:",
+        "links2": [
+            { "icon": "melomaniaks", "url": "#", "label": "" }
+        ]
+    },
+    "footer": {
+
     }
 }
