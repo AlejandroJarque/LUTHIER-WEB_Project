@@ -83,9 +83,9 @@ function Contact({ i18 }: { i18: any }) {
     <div className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
       <div className="flex flex-row justify-center gap-20 mt-8">
-        <div className="flex flex-col gap-4 pr-20 text-2xl">
+        <div className="flex flex-col gap-4 pr-20 text-3xl">
           {i18.links1.map((link: any) => (
-              <a key={link.label} href={link.url} className="flex items-center gap-3">
+              <a key={link.label} href={link.url} className="flex items-center gap-4 mb-4">
                 {icons[link.icon]}
                 {link.label}
               </a>
@@ -94,7 +94,9 @@ function Contact({ i18 }: { i18: any }) {
         <div className="flex flex-col gap-4 pl-20 text-2xl">
           <p className="text-orange-400">{i18.description2}</p>
           {i18.links2.map((link: any) => (
-            <a key={link.label} href={link.url}>{link.label}</a>
+            <a key={link.label} href={link.url} className="mx-auto">
+              <Image src="/img/MKS.png" alt="Melomaniak's" width={80} height={80} />
+            </a>
           ))}
         </div>
       </div>
