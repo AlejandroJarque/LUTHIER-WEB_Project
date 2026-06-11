@@ -2,12 +2,11 @@ import { getLangDictionary, getLocale, getAsText } from '../../_lang/lang';
 import Image from 'next/image';
 import { TitleText, TitleLogo} from '@/components/utils';
 import Carousel from '@/components/Carousel';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-const icons: { [key: string]: any } = {
-  instagram: <FaInstagram size={32} />,
-  whatsapp: <FaWhatsapp size={32} />,
-  };
+const iconImages: { [key: string]: string } = {
+  instagram: '/img/instagram.png',
+  whatsapp: '/img/whatsapp.png',
+}
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
   const lang = getLocale((await (params)).lang);
@@ -83,13 +82,15 @@ function Contact({ i18 }: { i18: any }) {
     <div className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
       <div className="flex flex-row justify-center gap-20 mt-8">
-        <div className="flex flex-col gap-4 pr-20 text-3xl">
-          {i18.links1.map((link: any) => (
-              <a key={link.label} href={link.url} className="flex items-center gap-4 mb-4">
-                {icons[link.icon]}
-                {link.label}
-              </a>
-          ))}
+        <div className="flex flex-col gap-4 pr-20 text-2xl">
+          <a href="#" className="flex items-center gap-2">
+            <Image className="pl-1" src="/img/instagram.png" alt="instagram" width={90} height={90} />
+            <span>@jukkaluthier</span>
+          </a>
+          <a href="#" className="flex items-center gap-2">
+            <Image src="/img/whatsapp.png" alt="whatsapp" width={90} height={90} />
+            <span>6*********</span>
+          </a>
         </div>
         <div className="flex flex-col gap-4 pl-20 text-2xl">
           <p className="text-orange-400">{i18.description2}</p>
