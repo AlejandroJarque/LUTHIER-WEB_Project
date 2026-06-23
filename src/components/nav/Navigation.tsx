@@ -12,9 +12,9 @@ export default function Navigation({ i18 }: any) {
             </a>
             <nav className="w-full hidden sm:flex flex-col items-center justify-center">
                 <ul className="flex flex-wrap list-none justify-center gap-4">
-                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#">{i18.aboutme}</Link></li>
-                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#">{i18.services}</Link></li>
-                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#">{i18.contact}</Link></li>
+                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#aboutme">{i18.aboutme}</Link></li>
+                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#services">{i18.services}</Link></li>
+                    <li className="px-7 hover:text-orange-400 hover:duration-500 duration-500"><Link href="#contact">{i18.contact}</Link></li>
                 </ul>
             </nav>
             <div className="sm:hidden">

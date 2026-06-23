@@ -43,7 +43,7 @@ function Landing({ i18 }: { i18: any }) {
 
 function Aboutme({ i18 }: { i18: any }) {
   return (
-    <div className="mx-20 pt-10">
+    <div id="aboutme" className="mx-20 pt-10">
       <TitleText title={i18.title} />
       <div className="flex flex-row m-2 ml-8 mt-4 pt-6">
         <Image className="border-transparent border-0 border rounded w-full h-full md:max-w-[480px] shadow-md shadow-orange-400/40" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
@@ -57,7 +57,7 @@ function Aboutme({ i18 }: { i18: any }) {
 
 function Services({ i18 }: { i18: any }) {
   return (
-    <div className="flex flex-col justify-center items-center mx-20 pt-10">
+    <div id="services" className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
       <div className="flex flex-row justify-center m-2 ml-8 mt-4 pt-6">
         <p className="whitespace-pre-line pr-40">{i18.description1}</p>
@@ -79,7 +79,7 @@ function Services({ i18 }: { i18: any }) {
 
 function Contact({ i18 }: { i18: any }) {
   return (
-    <div className="flex flex-col justify-center items-center mx-20 pt-10">
+    <div id="contact" className="flex flex-col justify-center items-center mx-20 pt-10">
       <TitleText title={i18.title} />
       <div className="flex flex-row justify-center gap-20 mt-8">
         <div className="flex flex-col gap-4 pr-20 text-2xl">
