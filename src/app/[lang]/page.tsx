@@ -83,11 +83,11 @@ function Contact({ i18 }: { i18: any }) {
       <TitleText title={i18.title} />
       <div className="flex flex-row justify-center gap-20 mt-8">
         <div className="flex flex-col gap-4 pr-20 text-2xl">
-          <a href="#" className="flex items-center gap-2">
+          <a href="https://www.instagram.com/jukkaluthier?igsh=eWw4MGxmNmNkdDdr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
             <Image className="pl-1" src="/img/instagram.png" alt="instagram" width={90} height={90} />
             <span>@jukkaluthier</span>
           </a>
-          <a href="#" className="flex items-center gap-4">
+          <a className="flex items-center gap-4">
             <Image className="pl-2 ml-1" src="/img/whatsapp.png" alt="whatsapp" width={80} height={80} />
             <span>6*********</span>
           </a>
