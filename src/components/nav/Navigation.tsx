@@ -5,8 +5,8 @@ import { JukkaLogo } from "../svg/SVGIcons"
 // bg-linear-to-b from-jukka-dark/90 from-20% to-jukka-dark/10
 export default function Navigation({ i18 }: any) {
     return <>
-        <header className="fixed w-full flex flex-row justify-between sm:justify-center items-center md:h-16 h-18 bg-linear-to-b from-jukka-dark/90 from-20% to-jukka-dark/10">
-            <a href="/" className="flex flex-row ml-4">
+        <header className=" z-50 fixed w-full flex flex-row justify-between sm:justify-center items-center md:h-16 h-18 bg-linear-to-b from-jukka-dark/90 from-20% to-jukka-dark/10">
+            <a href="/" className="flex flex-row ml-4 absolute left-4">
                 {/* <Image src="/img/logo_white_noletters.png" width={40} height={40} alt="F***" className="ml-6" /> */}
                 <JukkaLogo className="flex w-12 h-12 hover:text-orange-400 hover:duration-500 duration-500" />
             </a>
