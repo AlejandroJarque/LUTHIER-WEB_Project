@@ -87,8 +87,8 @@ function Contact({ i18 }: { i18: any }) {
             <Image className="pl-1" src="/img/instagram.png" alt="instagram" width={90} height={90} />
             <span>@jukkaluthier</span>
           </a>
-          <a href="#" className="flex items-center gap-2">
-            <Image src="/img/whatsapp.png" alt="whatsapp" width={90} height={90} />
+          <a href="#" className="flex items-center gap-4">
+            <Image className="pl-2 ml-1" src="/img/whatsapp.png" alt="whatsapp" width={80} height={80} />
             <span>6*********</span>
           </a>
         </div>
