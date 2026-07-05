@@ -35,7 +35,7 @@ export default function Navigation({ i18 }: any) {
 
     return <>
         <header className=" z-50 fixed w-full flex flex-row justify-between sm:justify-center items-center md:h-16 h-18 bg-linear-to-b from-jukka-dark/90 from-20% to-jukka-dark/10">
-            <a href="/" className="flex flex-row ml-4 absolute left-4">
+            <a href="/" className="flex flex-row ml-4 relative md:absolute md:left-4">
                 <JukkaLogo className="flex w-12 h-12 hover:text-orange-400 hover:duration-500 duration-500" />
             </a>
             <nav className="w-full hidden sm:flex flex-col items-center justify-center">
@@ -47,7 +47,7 @@ export default function Navigation({ i18 }: any) {
                     ))}
                 </ul>
             </nav>
-            <div className="sm:hidden">
+            <div className="md:hidden">
                 <MobileMenu navItems={navItems} />
             </div>
         </header>
