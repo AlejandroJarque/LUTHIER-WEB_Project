@@ -95,7 +95,7 @@ function Contact({ i18 }: { i18: any }) {
         <div className="flex flex-col gap-4 pl-20 text-2xl">
           <p className="text-orange-400">{i18.description2}</p>
           {i18.links2.map((link: any) => (
-            <a key={link.label} href={link.url} className="mx-auto">
+            <a key={link.label} href="https://www.melomaniaks.com/ca/inici/" target="_blank" rel="noopener noreferrer" className="mx-auto">
               <Image src="/img/MKS.png" alt="Melomaniak's" width={80} height={80} />
             </a>
           ))}
