@@ -1,7 +1,7 @@
 {
     "navigation": {
         "aboutme": "About Me",
-        "services": "Services - Luthier",
+        "services": "Services",
         "contact": "Contact"
     },
     "landing": {
@@ -24,7 +24,7 @@
         ]
     },
     "services": {
-        "title": "Services - Luthier",
+        "title": "Services",
         "description1": "Setups and string changes\nBreak/dent restoration\nElectronic repairs\nCustomizations\nComponent replacement\nOther...",
         "description2": "Over 6 years of experience\nGuaranteed professionalism\nPersonalized attention and proximity\nCompetitive and affordable prices"
     },

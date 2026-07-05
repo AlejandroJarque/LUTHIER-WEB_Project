@@ -1,7 +1,7 @@
 {
     "navigation": {
         "aboutme": "Sobre Mi",
-        "services": "Servicios - Luthier",
+        "services": "Servicios",
         "contact": "Contacto"
     },
     "landing": {
@@ -24,7 +24,7 @@
         ]    
     },
     "services": {
-        "title": "Servicios - Luthier",
+        "title": "Servicios",
         "description1": "Ajustes y cambio de cuerdas\nRestauración roturas/abolladuras\nReparaciones electrónicas\nCustomizaciones\nReemplazamiento de componentes\nOtros...",
         "description2": "Más de 6 años de experiencia\nProfesionalidad garantizada\nProximidad y atención personalizada\nPrecios competitivos y asequibles"
     },

@@ -1,7 +1,7 @@
 {
     "navigation": {
         "aboutme": "Sobre Mi",
-        "services": "Serveis - Luthier",
+        "services": "Serveis",
         "contact": "Contacte"
     },
     "landing": {
@@ -24,7 +24,7 @@
         ]
     },
     "services": {
-        "title": "Serveis - Luthier",
+        "title": "Serveis",
         "description1": "Ajustaments i canvi de cordes\nRestauració trencaments/cops\nReparacions electròniques\nCustomitzacions\nReemplaçament de components\nAltres...", 
         "description2": "Més de 6 anys d'experiència\nProfessionalitat garantida\nProximitat i atenció personalitzada\nPreus competitius i assequibles" 
     },
