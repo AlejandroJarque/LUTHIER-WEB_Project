@@ -43,13 +43,13 @@ function Landing({ i18 }: { i18: any }) {
 
 function Aboutme({ i18 }: { i18: any }) {
   return (
-    <div id="aboutme" className="mx-20 pt-10">
+    <div id="aboutme" className="px-6 sm:px-10 md:mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row m-2 ml-8 mt-4 pt-6">
-        <Image className="border-transparent border-0 border rounded w-full h-full md:max-w-[480px] shadow-md shadow-orange-400/40" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
-        <div className="flex flex-col justify-center items-start m-4 md:m-8 text-left">
-          <p>{getAsText(i18.description)}</p>
-        </div>
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mt-4 pt-6">
+        <Image className="border-transparent border-0 border rounded w-full max-w-xs sm:max-w-sm md:max-w-[480px] h-auto shrink-0 shadow-md shadow-orange-400/40" src="/img/landingv.jpg" width={800} height={1000} alt="About Me" />
+          <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left min-w-0 w-full">
+            <p className="break-words text-base sm:text-lg md:text-2xl">{getAsText(i18.description)}</p>
+          </div>
       </div>
     </div>
   )
@@ -57,11 +57,11 @@ function Aboutme({ i18 }: { i18: any }) {
 
 function Services({ i18 }: { i18: any }) {
   return (
-    <div id="services" className="flex flex-col justify-center items-center mx-20 pt-10">
+    <div id="services" className="flex flex-col justify-center items-center px-6 sm:px-10 md:mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row justify-center m-2 ml-8 mt-4 pt-6">
-        <p className="whitespace-pre-line pr-40">{i18.description1}</p>
-        <p className="whitespace-pre-line text-orange-400 pl-40">{i18.description2}</p>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0 mt-4 pt-6 w-full max-w-2xl">
+          <p className="whitespace-pre-line text-center md:text-left md:pr-40 text-base sm:text-lg md:text-2xl">{i18.description1}</p>
+          <p className="whitespace-pre-line text-orange-400 text-center md:text-left md:pl-40 text-base sm:text-lg md:text-2xl">{i18.description2}</p>
       </div>
       <div className="flex flex-row justify-center m-2 ml-8 mt-12 mb-4 max-w-[70%]">
         <Carousel source={[
@@ -79,20 +79,20 @@ function Services({ i18 }: { i18: any }) {
 
 function Contact({ i18 }: { i18: any }) {
   return (
-    <div id="contact" className="flex flex-col justify-center items-center mx-20 pt-10">
+    <div id="contact" className="flex flex-col justify-center items-center px-6 sm:px-10 md:mx-20 pt-10">
       <TitleText title={i18.title} />
-      <div className="flex flex-row justify-center gap-20 mt-8">
-        <div className="flex flex-col gap-4 pr-20 text-2xl">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 md:gap-20 mt-8">
+        <div className="flex flex-col gap-4 items-center md:items-start md:pr-20 text-lg sm:text-xl md:text-2xl">
           <a href="https://www.instagram.com/jukkaluthier?igsh=eWw4MGxmNmNkdDdr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-            <Image className="pl-1" src="/img/instagram.png" alt="instagram" width={90} height={90} />
+            <Image className="pl-1" src="/img/instagram.png" alt="instagram" width={95} height={95} />
             <span>@jukkaluthier</span>
           </a>
           <a className="flex items-center gap-4">
-            <Image className="pl-2 ml-1" src="/img/whatsapp.png" alt="whatsapp" width={80} height={80} />
+            <Image className="pl-0 ml-1" src="/img/whatsapp.png" alt="whatsapp" width={80} height={80} />
             <span>6*********</span>
           </a>
         </div>
-        <div className="flex flex-col gap-4 pl-20 text-2xl">
+        <div className="flex flex-col gap-4 items-center md:items-start md:pl-20 text-lg sm:text-xl md:text-2xl">
           <p className="text-orange-400">{i18.description2}</p>
           {i18.links2.map((link: any) => (
             <a key={link.label} href="https://www.melomaniaks.com/ca/inici/" target="_blank" rel="noopener noreferrer" className="mx-auto">
@@ -107,7 +107,7 @@ function Contact({ i18 }: { i18: any }) {
 
 function FinalFooter({ i18 }: { i18: any }) {
   return (
-    <div className="flex flex-col justify-center items-center mx-20 pt-10 pb-20">
+    <div className="flex flex-col justify-center items-center px-6 sm:px-10 md:mx-20 pt-10 pb-20">
       <TitleLogo />
     </div>
   )

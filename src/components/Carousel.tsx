@@ -22,24 +22,19 @@ function Carousel({ source }: { source: string[] }) {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center justify-center gap-2 md:gap-8 w-full">
         <button className="hover:text-orange-400 cursor-pointer " onClick={() => setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)}><ArrowBack /></button>
-        <Image className="hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 rotate-y-10 transition duration-300" src={images[prevIndex]} alt={`Imagen ${currentIndex - 1}`} width={400} height={200} onClick={() => {
-          setImagePreview(images[prevIndex])
-        }} />
-        <Image className=" hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 transition duration-300" src={images[currentIndex]} alt={`Imagen ${currentIndex}`} width={450} height={250} onClick={() => {
-          setImagePreview(images[currentIndex])
-        }} />
-        <Image className="hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 -rotate-y-10 transition duration-300" src={images[nextIndex]} alt={`Imagen ${currentIndex + 1}`} width={400} height={200} onClick={() => {
-          setImagePreview(images[nextIndex])
-        }} />
+          <Image className="hidden md:block hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 rotate-y-10 transition duration-300" src={images[prevIndex]} alt={`Imagen ${currentIndex - 1}`} width={400} height={200} onClick={() => {
+            setImagePreview(images[prevIndex])
+          }} />
+          <Image className="hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 transition duration-300 w-48 sm:w-64 md:w-[450px] h-auto" src={images[currentIndex]} alt={`Imagen ${currentIndex}`} width={450} height={250} onClick={() => {
+            setImagePreview(images[currentIndex])
+          }} />
+          <Image className="hidden md:block hover:border-orange-400 hover:border-2 cursor-pointer border border-0 rounded shadow-md shadow-orange-400/40 rotate-x-15 -rotate-y-10 transition duration-300" src={images[nextIndex]} alt={`Imagen ${currentIndex + 1}`} width={400} height={200} onClick={() => {
+            setImagePreview(images[nextIndex])
+          }} />
         <button className="hover:text-orange-400 cursor-pointer" onClick={() => setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)}><ArrowForward /></button>
       </div>
-      {imagePreview && (
-        <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50" onClick={() => setImagePreview('')}>
-          <Image className="border rounded shadow-md border-0" src={imagePreview} alt="Imagen ampliada" width={700} height={400} onClick={() => setImagePreview('')} />
-        </div>
-      )}
     </>
   )
 }
