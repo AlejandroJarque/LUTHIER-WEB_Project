@@ -25,6 +25,8 @@
     },
     "services": {
         "title": "Servicios",
+        "serviceItems" : ["Ajustes y cambio de cuerdas", "Restauración roturas/abolladuras", "Reparaciones electrónicas", "Customizaciones", "Reemplazamiento de componentes", "Otros..."],
+        "serviceGuarantees" : ["Más de 6 años de experiencia", "Profesionalidad garantizada", "Proximidad y atención personalizada", "Precios competitivos y asequibles"],
         "description1": "Ajustes y cambio de cuerdas\nRestauración roturas/abolladuras\nReparaciones electrónicas\nCustomizaciones\nReemplazamiento de componentes\nOtros...",
         "description2": "Más de 6 años de experiencia\nProfesionalidad garantizada\nProximidad y atención personalizada\nPrecios competitivos y asequibles"
     },

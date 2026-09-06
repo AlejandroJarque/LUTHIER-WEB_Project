@@ -26,7 +26,7 @@ export function getAsText(description: { text: string; highlight: boolean }[]|st
     if (typeof description === 'string') {
         return description
     }
-    return description.map((elem, index) => elem.highlight ? <b className="text-orange-400" key={index}>{elem.text}</b> : <span key={index}>{elem.text}</span>)
+    return description.map((elem, index) => elem.highlight ? <span className="text-orange-400" key={index}>{elem.text}</span> : <span key={index}>{elem.text}</span>)
 }
 
 export const getLangDictionary = async (locale: Locale) => langDictionaries[locale]()

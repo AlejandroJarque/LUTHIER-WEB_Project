@@ -4,6 +4,7 @@
   --background: #171717;
   --foreground: rgba(230, 230, 230, 1);
   --jukka-dark: #181818;
+  --jukka-darker: #0f0f0f;
   --jukka-blood: #92181a;
   --jukka-red: #B11215;
   --jukka-toxic: #28e751;
@@ -20,6 +21,7 @@
 
   /* Colors */
   --color-jukka-dark: var(--jukka-dark);
+  --color-jukka-darker: var(--jukka-darker);
   --color-jukka-blood: var(--jukka-blood);
   --color-jukka-red: var(--jukka-red);
   --color-jukka-toxic: var(--jukka-toxic);

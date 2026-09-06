@@ -74,7 +74,7 @@ export function MobileMenu({ navItems }: MobileMenuProps) {
                         <button className="cursor-pointer" onClick={() => {
                             setOpen(!open)
                             scrollToSection(id)
-                        }}>{label}</button>s
+                        }}>{label}</button>
                     </li>
                 ))}
             </ul>
